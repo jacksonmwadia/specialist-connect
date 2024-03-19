@@ -1,0 +1,33 @@
+<div id="header">
+    <div class="header-logo">
+      <a ><img src="../../../assets/images/logo1.png" alt="" style="width:140px; height:37px"></a>
+    </div>
+    <!-- <div  class="container">
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+      </div>
+    </div> -->
+    <div class="header-list">
+      <!-- *ngIf="loggedIn"   *ngIf="!loggedIn" -->
+      <nav class="header-list-nav">
+        <ul>
+
+          <li><a class="active" routerLink = "/home" *ngIf="!loggedIn" >Home</a></li>
+          <!-- <li><a  routerLink = "/home" >Book Appointment</a></li> -->
+          <!-- <li><a  routerLink = "/admin"  >Admin</a></li>
+          <li><a  routerLink = "/expert" >Expert</a></li>
+          <li><a  routerLink = "/user" >User</a></li> -->
+
+          <li ><a routerLink = "/login" *ngIf="!loggedIn">Login</a></li>
+          <li><a routerLink="/register"  *ngIf="!loggedIn">Register</a></li>
+          <li class="logout"><a routerLink="/home"  >Logout</a></li>
+
+        </ul>
+      </nav>
+      <div  class="header-list-icon">
+       
+      </div>
+    </div>
+  </div>
+
+

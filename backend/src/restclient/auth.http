@@ -1,0 +1,13 @@
+POST http://localhost:4100/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "admin"
+}
+
+
+###
+GET http://localhost:4100/auth/checkdetails
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6Imh0dHBzOi8vZXhhbXBsZS5jb20vcHJvZmlsZS1pbWFnZS5qcGciLCJpYXQiOjE3MTA3OTUyNzAsImV4cCI6MTcxMTA1NDQ3MH0.9FpomvSsZI96IuPc8PSOUFc0IZ0BgVQclHMthc4fQzY

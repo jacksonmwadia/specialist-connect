@@ -1,0 +1,34 @@
+
+<body>
+    <a routerLink="/expert/add-booking" class="add" style="margin: 0px;">.</a>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Banner</th>
+        <th>Salary</th>
+        <th>Profile_image</th>
+        <th>description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="status-open" *ngFor="let exp of p">
+        <td>{{exp.name}}</td>
+        <td><img src="{{exp.banner}}" style="width:70px; height:40px"  alt=""></td>
+        <td>{{exp.salary}}</td>
+        <td><img style="height:40px; width: 40px;" src="{{exp.profile_image}}"  alt="" /></td>
+        <td>{{exp.description}}</td>
+        <td><button class="action-button">Update</button>
+          <button class="action-button" style="background-color: red; margin-left:14px" (click)="deleteProduct(exp.card_id)">Delete</button></td>
+           
+      </tr>
+
+  
+    </tbody>
+  </table>
+  
+  </body>
+  
+  

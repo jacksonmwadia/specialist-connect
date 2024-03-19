@@ -1,0 +1,42 @@
+POST http://localhost:4100/expertcards
+Content-Type: application/json
+
+{
+  "name": "Mercyline Stive",
+  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/306426580/original/1c0605d0eea1a614765a862cb23bf7d848a57f96/build-and-design-a-wordpress-site-using-divi-elementor.jpg",
+  "profile_image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/306426580/original/1c0605d0eea1a614765a862cb23bf7d848a57f96/build-and-design-a-wordpress-site-using-divi-elementor.jpg",
+  "description": "I will build and design a wordpress website using divi, elementor",
+  "salary": "28000",
+  "user_id": "83414a60-e1e3-4bbc-82df-1342bb90ba45"
+}
+
+### get all expertcards
+GET http://localhost:4100/expertcards
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+### get one expertcards
+GET http://localhost:4100/expertcards/6842a634-e46c-417d-b53d-b8ac5b10501c
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+### update
+PUT http://localhost:4100/expertcards/update/4fb7ed8f-953f-4965-ae39-2b72b4185231
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+{
+  "name": " Stivene mark",
+  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/323507000/original/c6fc1abff69692192a08da642654c13b908cbbd5/design-responsive-website-for-you.jpg",
+  "profile_image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/238697444/original/d121fdf6158b2d2153c7e42cc2e8915ef6bd8d16/create-responsive-landing-page-contact-page-for-your-website.png",
+  "description": "I will professional website design within 24 hours. I will design responsive website for your business",
+  "salary": "21000",
+  "user_id": "83414a60-e1e3-4bbc-82df-1342bb90ba45"
+}
+
+
+### delete
+DELETE http://localhost:4100/expertcards/delete/6842a634-e46c-417d-b53d-b8ac5b10501c
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+

@@ -1,0 +1,94 @@
+/* Basic CSS for layout and styling */
+body {
+    font-family: Arial, sans-serif;
+  
+    padding: 0;
+    margin-top: 70px;
+}
+
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    background-color: azure;
+}
+
+.column header, .column section, .column footer {
+    padding: 20px;
+}
+
+.profile img, .review img, .review-content img {
+    display: block;
+    margin: 0 auto 10px; /* Center profile images */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.rating {
+    /* Add styles for rating icons here */
+    color: orange;
+}
+
+.work-images img {
+    width: 470px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.packages {
+    background-color: #f4f4f4;
+    border-left: 5px solid #333;
+    padding-left: 15px;
+}
+
+.package button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f4f4f4;
+}
+
+footer form {
+    margin-top: 20px;
+}
+
+footer textarea {
+    width: calc(100% - 22px); /* Adjusted width to accommodate padding */
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+footer button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.appointment-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    width: 130px;
+    align-items: center;
+}
+
+.about-expert {
+    margin-top: 20px;
+}

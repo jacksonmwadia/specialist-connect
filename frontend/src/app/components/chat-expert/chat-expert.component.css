@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+
+    background: linear-gradient(to bottom, #278A82 0%, #6aaca6 100%); /* Dark blue background color */
+}
+
+.chat-container {
+    width: 80%;
+    background-color: #e7e1e1; /* Darker shade for chat container */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px; /* Adjust this according to your needs */
+}
+
+.chat-box {
+    padding: 20px;
+    overflow-y: auto;
+    height: 90%;
+}
+
+.chat {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.expert img,
+.client img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.expert .message {
+    background-color: #007bff; /* Blue for expert's message */
+}
+
+.client .message {
+    background-color: #4CAF50; /* Green for client's message */
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    color: #fff; /* Text color for messages */
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #222; /* Darker shade for message input */
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.message-input button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.message-input button:hover {
+    background-color: #0056b3;
+}

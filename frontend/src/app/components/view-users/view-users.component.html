@@ -1,0 +1,111 @@
+
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersArr; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{user.name}}</td>
+            <td><img src="{{user.image}}" alt="John Doe"></td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone_no}}</td>
+            <td>{{user.role}}</td>
+            <td>
+                <button style="background-color: red;" (click)="deleteUser(user.user_id)">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <!-- <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td><img src="../../../assets/images/expert.jpg" alt="Jane Smith"></td>
+            <td>jane.smithexample.com</td>
+            <td>456-789-0123</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td><img src="../../../assets/images/client.jpg" alt="John Doe"></td>
+            <td>john.doeexample.com</td>
+            <td>123-456-7890</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td><img src="../../../assets/images/expert.jpg" alt="Jane Smith"></td>
+            <td>jane.smithexample.com</td>
+            <td>456-789-0123</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td><img src="../../../assets/images/client.jpg" alt="John Doe"></td>
+            <td>john.doeexample.com</td>
+            <td>123-456-7890</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td><img src="../../../assets/images/expert.jpg" alt="Jane Smith"></td>
+            <td>jane.smithexample.com</td>
+            <td>456-789-0123</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td><img src="../../../assets/images/client.jpg" alt="John Doe"></td>
+            <td>john.doeexample.com</td>
+            <td>123-456-7890</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td><img src="../../../assets/images/expert.jpg" alt="Jane Smith"></td>
+            <td>jane.smithexample.com</td>
+            <td>456-789-0123</td>
+            <td>
+                <button style="background-color: red;">Delete</button>
+                <button>Edit</button>
+            </td>
+        </tr> -->
+        <!-- Add more rows with dummy data as needed -->
+    </tbody>
+</table>
+
+</body>
+

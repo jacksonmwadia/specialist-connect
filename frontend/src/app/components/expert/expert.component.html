@@ -1,0 +1,26 @@
+<p>is</p>
+<div class="main">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="profile-section">
+                <!-- <img src="path_to_admin_avatar.jpg" alt="Admin" class="profile-image"> -->
+                <a ><img src="../../../assets/images/logo1.png" alt="" style="width:140px; height:37px; "></a>
+                <img src="../../../assets/images/expert.jpg" alt="Expert Profile Picture" alt="" style="width: 70px; height:70px;   border-radius: 50%; ">
+                <h3>Expert</h3>
+            </div >
+            <div class="contents" style="color:white;" >
+              <a  routerLink="dashboard"  style="color:white;" href="#"><i id ="icon" class="fas fa-tachometer-alt"></i>Dashboard</a>
+              <!-- <a routerLink="view-users" style="color:white;" href="#" ><i id ="icon" class="fas fa-users"></i>Users</a> -->
+
+              <a  routerLink="view-booking" style="color:white;" href="#"><i id ="icon" class="fas fa-tags"></i>Bookings</a>
+              <a  routerLink="expert-card" style="color:white;" href="#"><i id ="icon" class="fas fa-tags"></i>Expert Card</a>
+              <a routerLink="view-chat"style="color:white;"  href="#"><i id ="icon"  class="fa-solid fa-comment"> </i>Chat</a>
+              <!-- <a routerLink="view-orders" style="color:white;" href="#"><i id ="icon" class="fas fa-shopping-cart"></i>Orders</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+         <router-outlet></router-outlet>
+    </div>
+  </div> 
+  

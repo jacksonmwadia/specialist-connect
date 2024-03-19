@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+
+    
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  .status-open {
+    border-color: #3498db;
+    background-color: #ebf5fb;
+  }
+  
+  .status-booked {
+    border-color: #27ae60;
+    background-color: #e8f8ec;
+  }
+  
+  .status-complete {
+    border-color: #f39c12;
+    background-color: #fef9e7;
+  }
+  
+  .action-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .action-button:hover {
+    background-color: #c0392b;
+  }
+  
+
+  .add{
+   
+    align-items: center;
+    text-align: center;
+    /* background-color: #4CAF50; */
+    cursor: pointer;
+    color: white;
+    padding: 14px 20px ;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+
+  }
