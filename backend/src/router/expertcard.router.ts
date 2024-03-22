@@ -5,10 +5,10 @@ import { createExpertCard, deleteExpertCard, getExpertCards, getOneExpertCard, u
 
 const expertCardRoute = Router();
 
-expertCardRoute.post('/', createExpertCard); 
+expertCardRoute.post('/:id', createExpertCard); 
 expertCardRoute.get('/', getExpertCards); 
 expertCardRoute.put('/update/:id', verifyToken, updateExpertCard); 
 expertCardRoute.delete('/delete/:id', verifyToken, deleteExpertCard); 
-expertCardRoute.get('/:id', verifyToken, getOneExpertCard); 
+expertCardRoute.get('/one/:id', verifyToken, getOneExpertCard); 
 
 export default expertCardRoute;

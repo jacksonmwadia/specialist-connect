@@ -23,7 +23,8 @@
             <td>{{user.role}}</td>
             <td>
                 <button style="background-color: red;" (click)="deleteUser(user.user_id)">Delete</button>
-                <button>Edit</button>
+  
+                <a  style="cursor: pointer; background-color:blue; padding:7px; color:white; border-radius:4px; text-decoration:none" routerLink="/edit-user"> Edit</a>
             </td>
         </tr>
         <!-- <tr>

@@ -10,6 +10,7 @@ CREATE TABLE Users (
 
 
 select * from Users
+SELECT * FROM ExpertCards
 --  drop table Users
 
 update Users set role = 'expert' where name = 'expert'

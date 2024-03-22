@@ -1,0 +1,34 @@
+POST http://localhost:4100/expertProfileRoute/37935842-8eec-484f-8feb-7ac4968268b1
+Content-Type: application/json
+
+{
+  "recent_work": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/341866200/original/eb631d1486585f0abf91c5295e13b3aeb83c7a2a/professional-website-design-within-24-hours.png",
+  "about": "I will build might imply that they offer services related to building websites or web applications. Similarly, for a graphic designer, it could mean offering services related to creating designs or visual assets.",
+  "delivery": "2 DAYS"
+
+
+
+}
+
+
+### get all expert_profile
+GET http://localhost:4100/expertProfileRoute
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+### Get One Expert Profile:
+GET http://localhost:4100/expertProfileRoute/d2db2df7-9c77-43d5-b609-ccfcf0f5aa3b
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+
+### Update Expert Profile
+PUT http://localhost:4100/expertProfileRoute/update/4fb7ed8f-953f-4965-ae39-2b72b4185231
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+
+{
+  "recent_work": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/323507000/original/c6fc1abff69692192a08da642654c13b908cbbd5/design-responsive-website-for-you.jpg",
+  "about": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/238697444/original/d121fdf6158b2d2153c7e42cc2e8915ef6bd8d16/create-responsive-landing-page-contact-page-for-your-website"
+
+}

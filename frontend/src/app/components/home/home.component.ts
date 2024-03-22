@@ -21,7 +21,7 @@ export class HomeComponent {
   constructor(private ExpertCard: ExpertcardsService) {
   
 
-    this.ExpertCard.getExpertcards().subscribe(
+    this.ExpertCard.getExpertcards(``).subscribe(
       res=>{
         console.log(res.expertCards);
         this.p=res.expertCards

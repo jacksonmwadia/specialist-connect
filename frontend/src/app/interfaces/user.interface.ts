@@ -1,4 +1,9 @@
 export interface User{
+    image: string;
+    salary(salary: any): unknown;
+    description(description: any): unknown;
+    profile_image(profile_image: any): unknown;
+    banner(banner: any): unknown;
     user_id:string;
     name:string;
     email:string;

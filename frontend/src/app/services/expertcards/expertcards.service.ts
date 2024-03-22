@@ -3,19 +3,38 @@ import { ExpertCardResponse, OneexpertcardResponse } from '../../interfaces/expe
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UpdateExpertCard } from './expertcard.interface';
 
-
+export interface infoRes {
+    info: {
+      id: string;
+      email: string,
+      role: string
+    }
+  }
 @Injectable({
   providedIn: 'root'
 })
 export class ExpertcardsService {
+     
+     readToken(token: string) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        token,
+      }),
+    };
+    return this.http.post<{
+      info: { id: string; email: string; role: string };
+    }>('http://localhost:4100/auth/checkdetails', {}, httpOptions);
+  }
 
-  token = localStorage.getItem('authToken') as string
+  constructor(private http:HttpClient) {
 
-  constructor(private http:HttpClient) {}
+  }
 
-  getExpertcards(){
+  getExpertcards(userId: string){
+    
+    return this.http.get<ExpertCardResponse>(`http://localhost:4100/expertcards`)
     // const token = localStorage.getItem('authToken') as string
-    return this.http.get<ExpertCardResponse>('http://localhost:4100/expertcards')
   }
 
   deleteExpertcards(id:string){
@@ -31,7 +50,7 @@ export class ExpertcardsService {
   getOneExpertcardsDetails(id:string){
     const token = localStorage.getItem('authToken') as string
 
-    return this.http.get<OneexpertcardResponse>(`http://localhost:4100/expertcards/${id}`, {
+    return this.http.get<OneexpertcardResponse>(`http://localhost:4100/expertcards/one/${id}`, {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         token

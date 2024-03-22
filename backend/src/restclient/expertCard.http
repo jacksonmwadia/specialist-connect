@@ -1,13 +1,11 @@
-POST http://localhost:4100/expertcards
+POST http://localhost:4100/expertcards/83414a60-e1e3-4bbc-82df-1342bb90ba45
 Content-Type: application/json
 
 {
-  "name": "Mercyline Stive",
-  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/306426580/original/1c0605d0eea1a614765a862cb23bf7d848a57f96/build-and-design-a-wordpress-site-using-divi-elementor.jpg",
-  "profile_image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/306426580/original/1c0605d0eea1a614765a862cb23bf7d848a57f96/build-and-design-a-wordpress-site-using-divi-elementor.jpg",
-  "description": "I will build and design a wordpress website using divi, elementor",
-  "salary": "28000",
-  "user_id": "83414a60-e1e3-4bbc-82df-1342bb90ba45"
+  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121654517/original/3596cc141fe7341694adf0998d120512fac46f1e/create-modern-psd-website-design-or-website-mockup.jpg",
+  "profile_image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121654517/original/3596cc141fe7341694adf0998d120512fac46f1e/create-modern-psd-website-design-or-website-mockup.jpg",
+  "description": "I will your designer.",
+  "salary": "22000"
 }
 
 ### get all expertcards
@@ -16,9 +14,9 @@ Content-Type: application/json
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
 
 ### get one expertcards
-GET http://localhost:4100/expertcards/6842a634-e46c-417d-b53d-b8ac5b10501c
+GET http://localhost:4100/expertcards/one/83414a60-e1e3-4bbc-82df-1342bb90ba45
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDkyNDU4LCJleHAiOjE3MTEzNTE2NTh9.qbMbJpCEoSIqGNmPscVXp9SLLPforKs7RL1eRC-OIZk
 
 ### update
 PUT http://localhost:4100/expertcards/update/4fb7ed8f-953f-4965-ae39-2b72b4185231

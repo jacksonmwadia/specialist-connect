@@ -6,7 +6,7 @@ import { ApiService } from '../../services/api/api.service';
 @Component({
   selector: 'app-view-users',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule, RouterLink],
   templateUrl: './view-users.component.html',
   styleUrl: './view-users.component.css'
 })

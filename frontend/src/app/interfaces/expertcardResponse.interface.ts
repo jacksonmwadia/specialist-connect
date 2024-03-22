@@ -16,13 +16,13 @@ export interface ExpertCardResponse {
     };
   }
   export interface OneexpertcardResponse {
-    product: [
+    expertCard: [
       {
-        card_id: string;
+        user_id: string;
         name: string;
+        salary: string
         banner: string;
         description: string;
-        salary: string;
 
       }
     ];
@@ -32,4 +32,18 @@ export interface ExpertCardResponse {
     // };
   }
   
-  
+  export interface specialistResponse {
+    specialists: [
+      {
+        name:string
+        expert_profile_id: string,
+        recent_work:string, 
+        about:string, 
+        delivery:string, 
+        profile_image:string, 
+        salary:string, 
+        description:string, 
+     
+      }
+    ]
+  }

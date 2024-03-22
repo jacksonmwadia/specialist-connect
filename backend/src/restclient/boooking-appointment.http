@@ -1,0 +1,34 @@
+POST http://localhost:4100/appointments
+Content-Type: application/json
+
+{
+    "appointment_date": "2024-03-21",
+    "appointment_time": "14:00:00",
+    "expert_profile_id": "76212116-7828-4258-9fcb-83a348f44b49"
+}
+
+### Get All Appointments
+GET http://localhost:4100/appointments
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDE1MTU4LCJleHAiOjE3MTEyNzQzNTh9.QT01hYFBdpQp5564HDPd6kdBnnc9ZaoZASHVo5YZ3U4
+
+### Get One Appointment by ID
+GET http://localhost:4100/appointments/9c2b861f-0c86-4c8c-a900-c3fc1088687e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDE1MTU4LCJleHAiOjE3MTEyNzQzNTh9.QT01hYFBdpQp5564HDPd6kdBnnc9ZaoZASHVo5YZ3U4
+
+### Update Appointment
+PUT http://localhost:4100/appointments/update/9c2b861f-0c86-4c8c-a900-c3fc1088687e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDE1MTU4LCJleHAiOjE3MTEyNzQzNTh9.QT01hYFBdpQp5564HDPd6kdBnnc9ZaoZASHVo5YZ3U4
+
+{
+    "appointment_date": "2024-03-23",
+    "appointment_time": "18:00:00"
+    
+}
+
+### Delete Appointment
+DELETE http://localhost:4100/appointments/delete/9c2b861f-0c86-4c8c-a900-c3fc1088687e
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDE1MTU4LCJleHAiOjE3MTEyNzQzNTh9.QT01hYFBdpQp5564HDPd6kdBnnc9ZaoZASHVo5YZ3U4

@@ -11,13 +11,13 @@ const expertCards: ExpertCard[] = []
 
 export const createExpertCard = async (req: Request, res: Response) => {
     try {
-        const id = v4()
-        const { name, banner, profile_image, description, salary, user_id }: ExpertCard = req.body;
+        const id = v4();
+        const user_id = req.params.id;
+        const { banner, profile_image, description, salary }: ExpertCard = req.body;
 
         const pool = await mssql.connect(sqlConfig)
         const results = (await pool.request()
             .input("card_id", mssql.VarChar, id)
-            .input("name", mssql.VarChar, name)
             .input("banner", mssql.VarChar, banner)
             .input("profile_image", mssql.VarChar, profile_image)
             .input("description", mssql.VarChar, description)
@@ -29,6 +29,17 @@ export const createExpertCard = async (req: Request, res: Response) => {
 
         return res.json({
             message: "Expert Card Created Successfully",
+            expertCards: {
+                card_id:id,
+                banner,
+                profile_image,
+                description,
+                salary,
+                user_id,
+            }
+
+
+
         });
     } catch (error) {
         return res.json({ error });

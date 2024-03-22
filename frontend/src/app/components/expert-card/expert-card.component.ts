@@ -10,22 +10,42 @@ import { CommonModule } from '@angular/common';
   styleUrl: './expert-card.component.css'
 })
 export class ExpertCardComponent {
+  token = localStorage.getItem('authToken') as string
+  userId!: string
 
   p: any[] = [];
   successMessage: string = '';
   errorMessage: string = '';
 
   constructor(private ExpertCard: ExpertcardsService) {
+    this.ExpertCard.readToken(this.token).subscribe(res => {
+      console.log(res);
+      
+      this.userId = res.info.id
   
+this.getExpertCards()
+      
+    })
 
-    this.ExpertCard.getExpertcards().subscribe(
+    // this.ExpertCard.getOneExpertcardsDetails(id:string).subscribe(
+      //   res=>{
+    //     console.log(res.expertCard);
+    //     this.p=res.expertCard
+        
+    //   }
+    // )
+  }
+  getExpertCards() {
+    
+    this.ExpertCard.getOneExpertcardsDetails(this.userId).subscribe(
       res=>{
-        console.log(res.expertCards);
-        this.p=res.expertCards
+        console.log(res.expertCard);
+        this.p=res.expertCard
         
       }
     )
   }
+
   deleteProduct(id: string) {
 
     console.log('deleteProduct function called with id:', id);
