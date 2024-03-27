@@ -11,7 +11,7 @@
       <div id="slider">
         <figure>
           <img src="../../../assets/images/people/1.png">
-          <img src="../../../assets/images/people/2.png">
+          <!-- <img src="../../../assets/images/people/2.png"> -->
           <img src="../../../assets/images/people/3.png">
 
           <img src="../../../assets/images/people/4.png">
@@ -55,11 +55,15 @@
     <section class="product-section" class="section-p1">
    
       <h1 style="margin-left: 100px;">Meet Our Experts</h1>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." [(ngModel)]="filter" >
+        <button type="submit">Search</button>
+      </div>
       <!-- <p style="margin-left: 100px;">Summer Collection New Morden Design</p> -->
   
       <div class="pro-collection">
         <div class="display" style="display:flex; justify-content:center; flex-direction:row; gap:20px; flex-wrap:wrap">
-          <div *ngFor="let exp of p" class="product-cart" style=" width:22.7%">
+          <div *ngFor="let exp of p | search:filter" class="product-cart" style=" width:22.7%">
               <img style="height:270px; width: 440px;" src="{{exp.banner}}"  alt="" />
 
               <div class="name" style="display: flex; gap:12px; align-items:center">
@@ -79,7 +83,7 @@
                   <h5>   4.9 (17)</h5>
               </div>
               <h4 class="price">Price: {{exp.salary}} ksh</h4>
-              <a routerLink = "/view-expert-post"><i class="fa-solid fa-eye buy-icon"></i></a>
+              <a routerLink = "/view-expert-post" (click)="userPost(exp.card_id)"><i class="fa-solid fa-eye buy-icon"></i></a>
           </div>
           <!-- <div class="product-cart" style=" width:22.7%">
             <img style="height:270px; width: 440px;" src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/224430626/original/11ea764e37c655fabac206a07ceb11fac5903d9f/be-your-divi-expert-for-wordpress-divi-website-using-divi-builder-divi-theme.jpg"  alt="" />

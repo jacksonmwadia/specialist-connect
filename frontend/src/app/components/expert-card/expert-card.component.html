@@ -10,6 +10,9 @@
         <th>Salary</th>
         <th>Profile_image</th>
         <th>description</th>
+        <th>About</th>
+        <th>Delivery</th>
+        <th>recent_work</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -20,6 +23,9 @@
         <td>{{exp.salary}}</td>
         <td><img style="height:40px; width: 40px;" src="{{exp.image}}"  alt="" /></td>
         <td>{{exp.description}}</td>
+        <td>{{exp.delivery}}</td>
+        <td>{{exp.about}}</td>
+        <td><img src="{{exp.recent_work}}" style="width:70px; height:40px"  alt=""></td>
         <td><button class="action-button">Update</button>
           <button class="action-button" style="background-color: red; margin-left:14px" (click)="deleteProduct(exp.card_id)">Delete</button></td>
            

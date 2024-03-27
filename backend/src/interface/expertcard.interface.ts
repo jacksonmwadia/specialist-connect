@@ -5,6 +5,9 @@ export interface ExpertCard {
     name: string;
     description: string;
     salary: number;
+    recent_work: string;
+    about: string;
+    delivery: string;
     user_id:string;
   }
   

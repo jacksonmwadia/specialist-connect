@@ -34,8 +34,8 @@
           <label for="role">Role:</label><br />
           <select id="role" name="role" formControlName="role" required>
             <option value="" disabled selected>Select your role</option>
-            <option value="user">user</option>
-            <option value="expert">expert</option>
+            <option class="user" value="user">user</option>
+            <option class="expert" value="expert">expert</option>
           </select>
           <div *ngIf="registerForm.get('role')?.errors?.['required'] && registerForm.get('role')?.touched" class="error-message">
             Role is required.

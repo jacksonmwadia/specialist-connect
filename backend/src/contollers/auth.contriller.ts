@@ -45,7 +45,7 @@ export const loginUser = async (req: Request, res: Response) => {
         const correct_pwd = await bcrypt.compare(password, user.password);
         if (!correct_pwd) {
             
-            return res.json({ error: "Incorrect password" });
+            return res.json({ error: "Incorrect password or email" });
         }
         
         
@@ -63,6 +63,7 @@ export const loginUser = async (req: Request, res: Response) => {
         return res.status(200).json({
             message: "Logged in successfully",
             token
+     
         });
         
     } catch (error) {
@@ -111,60 +112,3 @@ export const resetPassword = async(req:Request, res: Response)=>{
         })
     }
 }
-
-
-
-
-// export const loginUser = async(req:Request, res:Response)=>{
-//     try {
-//         const{email, password} = req.body
-//         const pool = await mssql.connect(sqlConfig)
-//         let user = (await pool.request()
-//         .input("email" , email)
-//         .input("password", password)
-//         .execute("loginUser")).recordset
-
-//         // return res.json({user})
-//         console.log(user);  // console.log          
-        
-
-//         if(user[0]?.email == email){
-//             const correct_pwd = await bcrypt.compare(password, user[0].password)
-
-//             if(!correct_pwd){
-//                 return res.status(401).json({
-//                     error: "Incorrect password"
-//                 })
-//             }
-
-//             const loginCredentials = user.map(response =>{
-//                 const {password, isDeleted, location, ...rest} = response
-
-//                 return rest
-//             })
-
-//             const token = Jwt.sign(loginCredentials[0], process.env.SECRET as string, {
-//                 expiresIn: '3600s'
-//             })
-
-//             return res.status(200).json({
-//                 message: "Logged in successfully",
-//                 token,
-//                 ...loginCredentials[0]
-//             })
-//         }
-//         } catch (error) {
-//             return res.sendStatus(501).json({
-//                 error: "Internal server error"
-//             })
-//         }
-//     }
-
-//     export const checkUserDetails = async(req: ExtendedUserRequest, res: Response)=>{
-//         if(req.info){
-//             return res.json({
-//                 info: req.info
-//             })
-//         }
-//     }
-

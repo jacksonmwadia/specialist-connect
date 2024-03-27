@@ -9,6 +9,6 @@ expertProfileRoute.post('/:id', createExpertProfile);
 expertProfileRoute.get('/', getExpertProfiles); 
 expertProfileRoute.put('/update/:id', verifyToken, updateExpertProfile); 
 expertProfileRoute.delete('/delete/:id', verifyToken, deleteExpertProfile); 
-expertProfileRoute.get('/:id', verifyToken, getOneExpertProfile); 
+expertProfileRoute.get('/:id', getOneExpertProfile); 
 
 export default expertProfileRoute;

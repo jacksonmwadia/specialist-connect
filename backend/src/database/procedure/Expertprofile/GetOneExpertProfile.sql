@@ -1,6 +1,10 @@
-CREATE PROCEDURE GetOneExpertProfile
-    @expert_profile_id VARCHAR(255)
+CREATE OR ALTER PROCEDURE GetOneExperCard
+    @card_id VARCHAR(50)
 AS
 BEGIN
-    SELECT * FROM Expert_Profile WHERE expert_profile_id = @expert_profile_id;
-END;
+    SET NOCOUNT ON;
+    
+    SELECT *
+    FROM ExpertCards
+    WHERE card_id = @card_id;
+END

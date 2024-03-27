@@ -15,17 +15,30 @@ export interface infoRes {
 })
 export class ExpertcardsService {
      
-     readToken(token: string) {
+  //    readToken(token: string) {
+  //   const httpOptions = {
+  //     headers: new HttpHeaders({
+  //       'Content-Type': 'application/json',
+  //       token,
+  //     }),
+  //   };
+  //   return this.http.get<{
+  //     info: { id: string; email: string; role: string };
+  //   }>('http://localhost:4100/auth/checkdetails', {}, httpOptions);
+  // }
+
+  readToken(token: string) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         token,
       }),
     };
-    return this.http.post<{
+    return this.http.get<{
       info: { id: string; email: string; role: string };
-    }>('http://localhost:4100/auth/checkdetails', {}, httpOptions);
+    }>('http://localhost:4100/auth/checkdetails', httpOptions);
   }
+  
 
   constructor(private http:HttpClient) {
 
@@ -69,5 +82,33 @@ export class ExpertcardsService {
         token
       })
     })
+  }
+
+
+
+
+
+  getCard(card_id:string){
+
+
+    interface cardRepo{
+      message:[
+        {
+          card_id:string,
+          banner:string,
+          profile_img:string,
+          description:string,
+          salary:string,
+          user_id:string,
+          recent_work:string,
+          about:string,
+          delivery:string,
+
+        }
+      ]
+
+
+    }
+    return this.http.get<cardRepo>(`http://localhost:4100/expertcards/card/${card_id}`)
   }
 }

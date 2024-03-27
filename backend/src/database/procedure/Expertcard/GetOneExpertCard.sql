@@ -3,7 +3,7 @@ CREATE OR ALTER PROCEDURE GetOneExpertCard
 AS
 BEGIN
     -- SELECT * FROM ExpertCards WHERE card_id = @card_id
-    SELECT u.user_id, name, email, role, image, e.banner, e.description, e.salary FROM Users u
+    SELECT u.user_id, name, email, role, image, e.banner, e.description, e.salary,e.delivery, e.about, e.recent_work FROM Users u
 INNER JOIN ExpertCards e
 ON u.user_id =  e.user_id
  WHERE u.user_id = @card_id

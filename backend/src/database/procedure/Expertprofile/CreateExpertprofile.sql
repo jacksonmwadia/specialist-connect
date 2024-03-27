@@ -1,6 +1,6 @@
 CREATE OR ALTER  PROCEDURE CreateExpertProfile
     @expert_profile_id VARCHAR(255),
-    -- @card_id VARCHAR(255),
+    @card_id VARCHAR(255),
     @recent_work VARCHAR(MAX),
     @about VARCHAR(MAX),
     @delivery VARCHAR(MAX),

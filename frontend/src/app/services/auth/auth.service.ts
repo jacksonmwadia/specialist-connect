@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { register } from '../../interfaces/register.interface';
-import { login } from '../../interfaces/login.interface';
+import { User1, login } from '../../interfaces/login.interface';
+import { Observable } from 'rxjs';
 
 
 
@@ -39,13 +40,29 @@ export class AuthService {
 
 
     console.log(token)
-    this.http.get<{info:{id:string, email: string, role:string}}>('http://localhost:4100/auth/checkdetails', {
+    this.http.post<{info:{id:string, email: string, role:string}}>('http://localhost:4100/auth/checkdetails', {
       headers: new HttpHeaders( {
         'Content-type': 'application/json',
         token
 
       })
     }).subscribe(res=>callback(res))
+  }
+
+
+
+
+  readToken1():Observable<{info:User1}>{
+    const token = localStorage.getItem('authToken') as string
+
+    return this.http.get<{info:User1}>('http://localhost:4100/auth/checkdetails', {
+      headers: new HttpHeaders( {
+        'Content-type': 'application/json',
+        token
+
+      })
+    })
+    
   }
 
   // createProduct(product_details:Product){

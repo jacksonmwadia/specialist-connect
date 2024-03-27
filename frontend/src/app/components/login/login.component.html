@@ -2,8 +2,10 @@
 
 
 <body>
-    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    
+    
     <div class="login-container">
+      
       <div class="image">
         <img
           src="../../../assets/images/img.png"
@@ -14,6 +16,8 @@
       <div class="formcontainer">
         <h2>Login to your account</h2>
         <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+          <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
           <label for="username">Email:</label><br />
           <input class="email" type="email" id="email" name="email" formControlName="email" required>
           <div *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.touched" class="error-message">

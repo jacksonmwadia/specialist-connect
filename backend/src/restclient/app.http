@@ -4,7 +4,7 @@ Content-Type: application/json
 {
   "name": "jackson1",
   "phone_no": "18-00-80",
-  "email": "jackson1@gmail.com",
+  "email": "jackson23@gmail.com",
    "role": "expert",
   "image": "https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", 
   "password": "expert"
@@ -15,21 +15,19 @@ Content-Type: application/json
 
 GET http://localhost:4100/users
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDkxOTkwLCJleHAiOjE3MTEzNTExOTB9.BeQcux7aXfSh5oA5voKw20PHoEr60RKU4wzxjMlijQc
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExNDQyNTk2LCJleHAiOjE3MTE3MDE3OTZ9.8MoouiaBD5NB4cGZuSB0qwFkCejReXvS1bKTDlEWAgA
 
 
 ### get 1 user by id
 
 GET http://localhost:4100/users/7d1112c0-8e0a-4dc7-808c-85e932e7f782
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDkxOTkwLCJleHAiOjE3MTEzNTExOTB9.BeQcux7aXfSh5oA5voKw20PHoEr60RKU4wzxjMlijQc
-
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExNDQyNTk2LCJleHAiOjE3MTE3MDE3OTZ9.8MoouiaBD5NB4cGZuSB0qwFkCejReXvS1bKTDlEWAgA
 
 ### update user
 
 PUT http://localhost:4100/users/update/7d1112c0-8e0a-4dc7-808c-85e932e7f782
 Content-Type: application/json
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDkxOTkwLCJleHAiOjE3MTEzNTExOTB9.BeQcux7aXfSh5oA5voKw20PHoEr60RKU4wzxjMlijQc
-
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExNDQyNTk2LCJleHAiOjE3MTE3MDE3OTZ9.8MoouiaBD5NB4cGZuSB0qwFkCejReXvS1bKTDlEWAgA
 
 {
  "name": "admin",

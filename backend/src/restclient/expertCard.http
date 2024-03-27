@@ -1,11 +1,16 @@
-POST http://localhost:4100/expertcards/83414a60-e1e3-4bbc-82df-1342bb90ba45
+POST http://localhost:4100/expertcards/99c0ded2-5f76-46fa-8953-0927ccf19762
 Content-Type: application/json
 
 {
-  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121654517/original/3596cc141fe7341694adf0998d120512fac46f1e/create-modern-psd-website-design-or-website-mockup.jpg",
+  "banner": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/323507000/original/c6fc1abff69692192a08da642654c13b908cbbd5/design-responsive-website-for-you.jpg",
   "profile_image": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/121654517/original/3596cc141fe7341694adf0998d120512fac46f1e/create-modern-psd-website-design-or-website-mockup.jpg",
   "description": "I will your designer.",
-  "salary": "22000"
+  "salary": "2000",
+  "recent_work": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/581d3ec15c82e9af37201daf276f83dc-1705344984/screencapture-villareaviajes-2024-01-16-02_55_38/build-and-design-a-wordpress-site-using-divi-elementor.png",
+   "about": "I am passionate about creating visually captivating designs that leave a lasting impression. My goal is to translate your ideas into compelling visuals that resonate with your target audience.",
+  "delivery": "4 "
+
+
 }
 
 ### get all expertcards
@@ -14,9 +19,14 @@ Content-Type: application/json
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNlY2JlM2NiLTFhMDMtNGJlOC04ZWRjLTdjMzI4YmZmMTFkNyIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzEwNzU0MDAxLCJleHAiOjE3MTEwMTMyMDF9.O9BWeBgfq1-8NQPf7SaWyOcfYlCTvO5r6hdzpG2FJeQ
 
 ### get one expertcards
-GET http://localhost:4100/expertcards/one/83414a60-e1e3-4bbc-82df-1342bb90ba45
+GET http://localhost:4100/expertcards/one/99c0ded2-5f76-46fa-8953-0927ccf19762
 Content-Type: application/json
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExMDkyNDU4LCJleHAiOjE3MTEzNTE2NTh9.qbMbJpCEoSIqGNmPscVXp9SLLPforKs7RL1eRC-OIZk
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdkMTExMmMwLThlMGEtNGRjNy04MDhjLTg1ZTkzMmU3Zjc4MiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzExNDQ1NzYwLCJleHAiOjE3MTE3MDQ5NjB9.9m3g6f-cI836EcWfZ_7P9REFMBSmJwBp69ZPhUhNJUM
+
+###
+GET http://localhost:4100/expertcards/card0b277663-1ba2-4fd0-ba8c-940526597820
+
+
 
 ### update
 PUT http://localhost:4100/expertcards/update/4fb7ed8f-953f-4965-ae39-2b72b4185231

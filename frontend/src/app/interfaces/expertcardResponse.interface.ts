@@ -23,6 +23,9 @@ export interface ExpertCardResponse {
         salary: string
         banner: string;
         description: string;
+        recent_work:string, 
+        about:string, 
+        delivery:string, 
 
       }
     ];

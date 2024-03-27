@@ -1,4 +1,5 @@
 export interface ExpertCard {
+image: any;
     card_id: string;
     name: string;
     description: string;

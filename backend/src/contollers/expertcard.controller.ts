@@ -13,7 +13,7 @@ export const createExpertCard = async (req: Request, res: Response) => {
     try {
         const id = v4();
         const user_id = req.params.id;
-        const { banner, profile_image, description, salary }: ExpertCard = req.body;
+        const { banner, profile_image, description, salary, about, delivery, recent_work }: ExpertCard = req.body;
 
         const pool = await mssql.connect(sqlConfig)
         const results = (await pool.request()
@@ -23,6 +23,9 @@ export const createExpertCard = async (req: Request, res: Response) => {
             .input("description", mssql.VarChar, description)
             .input("salary", mssql.VarChar, salary)
             .input("user_id", mssql.VarChar, user_id)
+            .input("recent_work", mssql.VarChar, recent_work)
+            .input("about", mssql.VarChar, about)
+            .input("delivery", mssql.VarChar, delivery)
             .execute("CreateExpertCard")).rowsAffected
 
         console.log(results);
@@ -35,6 +38,9 @@ export const createExpertCard = async (req: Request, res: Response) => {
                 profile_image,
                 description,
                 salary,
+                recent_work,
+                about,
+                delivery,
                 user_id,
             }
 
@@ -112,6 +118,28 @@ export const deleteExpertCard = async (req: Request, res: Response) => {
             })
         }
     } catch (error) {
+        return res.json({ error });
+    }
+}
+
+
+
+export const getExpertCard = async (req: Request, res: Response) => {
+    try {
+
+        const card_id = req.params.card_id;
+        const pool = await mssql.connect(sqlConfig);
+
+        const message = (await pool.request().input("card_id", card_id).execute("GetOneExperCard")).recordset
+        return res.json({message })
+
+
+       
+    } 
+    
+    
+    
+    catch (error) {
         return res.json({ error });
     }
 }

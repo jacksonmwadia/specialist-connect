@@ -25,7 +25,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: 'view-expert-post', component: SingleExpertPageComponent},
+    { path: 'view-expert-post/:card_id', component: SingleExpertPageComponent},
     {path: 'add-booking', component: ExpertAddAppointmentComponent},
     {path: 'edit-user', component: EditUserComponent},
     

@@ -1,3 +1,5 @@
+
+import { getExpertCards } from './expertcard.controller';
 import { Request, Response } from "express";
 import { v4 } from 'uuid'
 
@@ -14,12 +16,12 @@ export const createExpertProfile = async (req: Request, res: Response) => {
     try {
         const id = v4();
         const user_id = req.params.id;
-        const { recent_work, about, delivery,  }: ExpertProfile = req.body;
+        const { recent_work, about, delivery, card_id }: ExpertProfile = req.body;
 
         const pool = await mssql.connect(sqlConfig)
         const results = (await pool.request()
             .input("expert_profile_id", mssql.VarChar, id)
-            // .input("card_id", mssql.VarChar, card_id)
+            .input("card_id", mssql.VarChar, card_id)
             .input("recent_work", mssql.VarChar, recent_work)
             .input("about", mssql.VarChar, about)
             .input("delivery", mssql.VarChar, delivery)
@@ -39,10 +41,10 @@ export const createExpertProfile = async (req: Request, res: Response) => {
 export const getExpertProfiles = async (req: Request, res: Response) => {
     try {
         const pool = await mssql.connect(sqlConfig);
-        const allExpertProfiles = (await pool.request().execute("GetAllExpertProfiles")).recordset
+        const message = (await pool.request().execute("GetAllExpertProfiles")).recordset
 
         return res.status(200).json({
-            expertProfiles: allExpertProfiles
+            message
         });
     } catch (error) {
         return res.json({ error });
@@ -51,10 +53,10 @@ export const getExpertProfiles = async (req: Request, res: Response) => {
 
 export const getOneExpertProfile = async (req: Request, res: Response) => {
     try {
-        const id = req.params.id
+        const card_id= req.params.card_id
 
         const pool = await mssql.connect(sqlConfig);
-        const expertProfile = (await pool.request().input("expert_profile_id", id).execute("GetOneExpertProfile")).recordset
+        const expertProfile = (await pool.request().input("card_id", card_id).execute("GetOneExpertProfiles")).recordset
         return res.json({ expertProfile })
     } catch (error) {
         return res.json({ error });
@@ -103,3 +105,5 @@ export const deleteExpertProfile = async (req: Request, res: Response) => {
         return res.json({ error });
     }
 }
+
+
